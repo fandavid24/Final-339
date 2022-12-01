@@ -1,0 +1,60 @@
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-item {
+    /* flex: 0 0 auto; */
+    width: 50%;
+}
+
+h3 {
+    padding-bottom: 5px;
+    padding-top: 3px;
+}
+
+.genre {
+    border: solid 2px;
+    border-radius: 3px;
+    margin: 5px;
+    white-space: nowrap;
+    background-color: #ccc;
+    padding: 2px;
+}
+
+.btn {
+    margin: 2px;
+}
+
+.dropdown-toggle {
+    background-color: lightblue;
+}
+
+.artist {
+    margin-bottom: 50px;
+    display: inline;
+    height: 250px
+}
+
+.artist-albumcover {
+    max-width: 200px;
+    margin-right: 30px;
+}
+
+.albumcover {
+    max-height: 300px;
+    max-width: 300px;
+    display: inline;
+}
+
+.artist-info {
+    max-height: 250px;
+}
+
+footer {
+    display: flex;
+    justify-items: center;
+    background-color: darkgray;
+    height: 30px;
+}

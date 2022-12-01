@@ -1,0 +1,31 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+    column-gap: 5%;
+}
+
+.grid-container div {
+    text-align: center;
+}
+
+.grid-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    border: 3px solid black;
+}
+
+.modal-body {
+    font-size: medium;
+}
+
+footer {
+    display: flex;
+    justify-items: center;
+    background-color: darkgray;
+    height: 30px;
+}
