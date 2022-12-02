@@ -1,0 +1,20 @@
+.skip-to-content-link {
+    background: lightgrey;
+    height: 30px;
+    left: 45%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-600%);
+    transition: transform 0.3s;
+}
+
+.skip-to-content-link:focus {
+    transform: translateY(-10%);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: darkgray;
+    height: 30px;
+}

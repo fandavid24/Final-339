@@ -16,6 +16,7 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="shared.css">
     <link rel="stylesheet" type="text/css" href="artist.css">
     <!--Vue-->
     <script src="https://unpkg.com/vue@3"></script>
@@ -24,18 +25,21 @@
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar </a>
+        <a class="skip-to-content-link" href="#main">
+            Skip to content
+        </a>
+        <a class="navbar-brand" href="#">David's Portfolio </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="artist.html">Top Artists<span class="sr-only">(current)</span></a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="artist.html">Top Artists<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="search.html">Song Search</a>
@@ -45,9 +49,11 @@
 </header>
 
 <body>
-    <h4>These are some of my favorite artists! Click the button to discover their music</h4>
-    <div class="grid-container">
-        <!-- <img src="img/artists/kanye.webp" alt="kanye west">class="button-1"
+    <div id="main">
+        <h4 class="TD-desc">These are some of my favorite artists! Click the button to discover their music</h4>
+        <h4 class="M-desc">Click the button to discover their music</h4>
+        <div class="grid-container">
+            <!-- <img src="img/artists/kanye.webp" alt="kanye west">class="button-1"
         <img src="img/artists/tjay.png" alt="lil tjay">
         <img src="img/artists/a boogie.jpg" alt="a boogie wit da hoodie">
         <img src="img/artists/heize.jpg" alt="heize">
@@ -56,59 +62,63 @@
         <img src="img/artists/post.webp" alt="post malone">
         <img src="img/artists/pop.jpg" alt="pop smoke">
         <img src="img/artists/joji.webp" alt="joji"> -->
-        <div>
-            <img src="img/artists/kanye.webp" alt="kanye west">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#kanye-modal">kanye
-                west</button>
-        </div>
-        <div>
-            <img src="img/artists/tjay.png" alt="lil tjay">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tjay-modal">Lil
-                Tjay</button>
-        </div>
-        <div>
-            <img src="img/artists/a boogie.jpg" alt="a boogie wit da hoodie">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#aboogie-modal">A
-                Boogie</button>
-        </div>
-        <div>
-            <img src="img/artists/heize.jpg" alt="heize">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#heize-modal">Heize</button>
-        </div>
-        <div>
-            <img src="img/artists/IU.jpg" alt="IU">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#IU-modal">IU</button>
-        </div>
-        <div>
-            <img src="img/artists/laroi.jpg" alt="the kid laroi">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#laroi-modal">The Kid
-                Laroi</button>
-        </div>
-        <div>
-            <img src="img/artists/post.webp" alt="post malone">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#post-modal">Post
-                Malone</button>
-        </div>
-        <div>
-            <img src="img/artists/ali.jpg" alt="ali gatie">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ali-modal">Ali
-                Gatie</button>
-        </div>
-        <div>
-            <img src="img/artists/joji.webp" alt="joji">
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#joji-modal">Joji</button>
+            <div>
+                <img src="img/artists/kanye.webp" alt="kanye west">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#kanye-modal">kanye
+                    west</button>
+            </div>
+            <div>
+                <img src="img/artists/tjay.png" alt="lil tjay">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tjay-modal">Lil
+                    Tjay</button>
+            </div>
+            <div>
+                <img src="img/artists/a boogie.jpg" alt="a boogie wit da hoodie">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#aboogie-modal">A
+                    Boogie</button>
+            </div>
+            <div>
+                <img src="img/artists/heize.jpg" alt="heize">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                    data-target="#heize-modal">Heize</button>
+            </div>
+            <div>
+                <img src="img/artists/IU.jpg" alt="IU">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#IU-modal">IU</button>
+            </div>
+            <div>
+                <img src="img/artists/laroi.jpg" alt="the kid laroi">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#laroi-modal">The Kid
+                    Laroi</button>
+            </div>
+            <div>
+                <img src="img/artists/post.webp" alt="post malone">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#post-modal">Post
+                    Malone</button>
+            </div>
+            <div>
+                <img src="img/artists/ali.jpg" alt="ali gatie">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ali-modal">Ali
+                    Gatie</button>
+            </div>
+            <div>
+                <img src="img/artists/joji.webp" alt="joji">
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                    data-target="#joji-modal">Joji</button>
+            </div>
         </div>
     </div>
     <script src="artist.js"></script>
+    <div class="footer-spacing"></div>
 </body>
 <footer>
     <h5 class="footer-text">
@@ -127,7 +137,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "I Wonder" (2007)
+                <a href="https://www.youtube.com/watch?v=MxEjnYdfLXU">link</a>
+                <br><br><br>
+                "Hurricane ft. The Weeknd & Lil Baby" (2021)
+                <a href="https://www.youtube.com/watch?v=VRJiK-kdDb4">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "I Wonder" (2007)
                 <a href="https://www.youtube.com/watch?v=MxEjnYdfLXU">link</a>
                 <br>
@@ -151,7 +170,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "Leaked" (2019)
+                <a href="https://www.youtube.com/watch?v=LT9fj89qKdU">link</a>
+                <br><br><br>
+                "Beat the Odds" (2022)
+                <a href="https://www.youtube.com/watch?v=OcY-i47Eduo">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "Leaked" (2019)
                 <a href="https://www.youtube.com/watch?v=LT9fj89qKdU">link</a>
                 <br>
@@ -175,7 +203,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "Drowning ft. Kodak Black" (2017)
+                <a href="https://www.youtube.com/watch?v=rvaJ7QlhH0g">link</a>
+                <br><br><br>
+                "Say A'" (2017)
+                <a href="https://www.youtube.com/watch?v=97qX2hktSrw">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "Drowning ft. Kodak Black" (2017)
                 <a href="https://www.youtube.com/watch?v=rvaJ7QlhH0g">link</a>
                 <br>
@@ -199,7 +236,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "And July ft. DEAN & dj friz" (2016)
+                <a href="https://www.youtube.com/watch?v=rCeM57e2BfU">link</a>
+                <br><br><br>
+                "We don't talk together ft. GIRIBOY" (2019)
+                <a href="https://www.youtube.com/watch?v=ByHNlfmmT-w">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "And July ft. DEAN & dj friz" (2016)
                 <a href="https://www.youtube.com/watch?v=rCeM57e2BfU">link</a>
                 <br>
@@ -224,7 +270,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "Good Day" (2010)
+                <a href="https://www.youtube.com/watch?v=jeqdYqsrsA0">link</a>
+                <br><br><br>
+                "LILAC" (2021)
+                <a href="https://www.youtube.com/watch?v=v7bnOxV4jAc">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "Good Day" (2010)
                 <a href="https://www.youtube.com/watch?v=jeqdYqsrsA0">link</a>
                 <br>
@@ -248,7 +303,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "Diva ft. Lil Tecca" (2020)
+                <a href="https://www.youtube.com/watch?v=ZMqhjKRUGsY">link</a>
+                <br><br><br>
+                "Always Do" (2020)
+                <a href="https://www.youtube.com/watch?v=tZsia6-aBZM">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "Diva ft. Lil Tecca" (2020)
                 <a href="https://www.youtube.com/watch?v=ZMqhjKRUGsY">link</a>
                 <br>
@@ -272,7 +336,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "Why Don't You Love Me? ft. Jazzy Eff" (2014)
+                <a href="https://www.youtube.com/watch?v=XWr2VZiov_A">link</a>
+                <br><br><br>
+                "Circles" (2019)
+                <a href="https://www.youtube.com/watch?v=wXhTHyIgQ_U">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "Why Don't You Love Me? ft. Jazzy Eff" (2014)
                 <a href="https://www.youtube.com/watch?v=XWr2VZiov_A">link</a>
                 <br>
@@ -296,7 +369,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "It's You" (2019)
+                <a href="https://www.youtube.com/watch?v=PXGycbkbtW0">link</a>
+                <br><br><br>
+                "Can't Lie" (2018)
+                <a href="https://www.youtube.com/watch?v=Ddaf1YE1kms">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "It's You" (2019)
                 <a href="https://www.youtube.com/watch?v=PXGycbkbtW0">link</a>
                 <br>
@@ -320,7 +402,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body M-desc">
+                <br>
+                "Afterthought ft. BENEE" (2020)
+                <a href="https://www.youtube.com/watch?v=ujriV3vkC9w">link</a>
+                <br><br><br>
+                "Glimpse of Us" (2022)
+                <a href="https://www.youtube.com/watch?v=xuGaLIleROI">link</a>
+                <br><br>
+            </div>
+            <div class="modal-body TD-desc">
                 "Afterthought ft. BENEE" (2020)
                 <a href="https://www.youtube.com/watch?v=ujriV3vkC9w">link</a>
                 <br>

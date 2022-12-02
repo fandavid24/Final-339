@@ -11,19 +11,21 @@
     height: 100%;
     border: 3px solid black;
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-items: stretch;
+    /* align-items: stretch; */
 }
 
 .profile {
     display: flex;
     flex-direction: column;
     align-content: stretch;
-    width: 32%;
+    width: 100%;
     border: 3px solid grey;
+    align-self: stretch;
 }
 
 .profile img {
@@ -34,20 +36,22 @@
 }
 
 .desc {
-    width: 32%;
+    width: 100%;
     border: 3px solid grey;
     font-size: larger;
     text-align: center;
+    align-self: stretch;
 }
 
 .socials {
     display: flex;
-    width: 32%;
+    width: 100%;
     border: 3px solid grey;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     text-align: center;
+    align-self: stretch;
 }
 
 .socials h2 {
@@ -60,9 +64,72 @@
     object-fit: contain;
 }
 
-footer {
-    display: flex;
-    justify-items: center;
-    background-color: darkgray;
-    height: 30px;
+.footer-spacing {
+    margin-bottom: 50px;
+}
+
+.MD-list {
+    display: block;
+}
+
+.T-list {
+    display: none;
+}
+
+/* tablet display */
+@media screen and (min-width: 768px) {
+    .flex-grid {
+        overflow-x: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .profile {
+        width: 50%;
+    }
+
+    .desc {
+        width: 50%;
+    }
+
+    .socials {
+        width: 100%;
+    }
+
+    .T-list {
+        display: block;
+    }
+
+    .MD-list {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .flex-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-between;
+        align-items: center;
+    }
+
+    .profile {
+        width: 32%;
+    }
+
+    .desc {
+        width: 32%;
+    }
+
+    .socials {
+        width: 32%;
+    }
+
+    .MD-list {
+        display: block;
+    }
+
+    .T-list {
+        display: none;
+    }
 }
