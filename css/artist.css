@@ -19,6 +19,7 @@
     border: 3px solid black;
 }
 
+
 .modal-body {
     font-size: medium;
 }
@@ -70,5 +71,10 @@
     .grid-container {
         grid-template-columns: 32% 32% 32%;
         column-gap: 0%;
+    }
+
+    .grid-container button {
+        font-size: 150%;
+        line-height: 1.5;
     }
 }

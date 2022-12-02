@@ -4,6 +4,11 @@
     align-content: center;
     /* flex-direction: column; */
     background-color: lightgrey;
+    font-size: 200%;
+}
+
+b {
+    font-weight: bold;
 }
 
 .flex-grid {
