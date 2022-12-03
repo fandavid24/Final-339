@@ -29,7 +29,9 @@
       <a class="skip-to-content-link" href="#app">
          Skip to content
       </a>
-      <a class="navbar-brand" href="#">David's Portfolio </a>
+      <a class="navbar-brand" href="#">
+         <h1>David's Portfolio</h1>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -49,71 +51,75 @@
       </div>
 </header>
 
-<body>
-   <div id='app'>
-      <div class="container">
-         <div class="row searchbar">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-               <h4>Enter the name of the artist and press enter: </h4>
-               <input v-on:keyup.enter="searchArtist" v-model="term" type="text">
-            </div>
-         </div>
-         <div>
-            <h3 class="search-result">
-               Search Result (Total {{shown.length}} Found.)
-            </h3>
-         </div>
-         <div class="flex-grid">
-            <div v-for="(entry, index) in shown" class="flex-item">
-               <div class='artist'>
+<main>
 
-                  <div>
-                     <div class="card">
-                        <img class="card-img-top albumcover" v-bind:src="entry.artworkUrl100">
-                        <ul class="list-group list-group-flush">
-                           <li class="list-group-item">
-                              <div v-if="entry.artistName">
-                                 <b>Artist Name: </b> {{entry.artistName}}
-                              </div>
-                              <div v-else>
-                                 <b>Artist Name: </b> No information provided
-                              </div>
-                           </li>
-                           <li class="list-group-item">
-                              <div v-if="entry.collectionName">
-                                 <b>Collection Name: </b> {{entry.collectionName}}
-                              </div>
-                              <div v-else>
-                                 <b>Collection Name: </b> No information provided
-                              </div>
-                           </li>
-                           <li class="list-group-item">
-                              <div v-if="entry.collectionPrice">
-                                 <b>Price: </b> {{entry.collectionPrice}}
-                              </div>
-                              <div v-else>
-                                 <b>Price: </b> 0
-                              </div>
-                           </li>
-                           <li class="list-group-item">
-                              <div v-if="entry.trackName">
-                                 <b>Song Name: </b> {{entry.trackName}}
-                              </div>
-                              <div v-else>
-                                 <b>Song Name: </b> No information provided
-                              </div>
-                           </li>
-                        </ul>
+   <body>
+      <div id='app'>
+         <div class="container">
+            <div class="row searchbar">
+               <div class="col-lg-12 col-md-12 col-sm-12">
+                  <p>Enter the name of the artist and press enter: </p>
+                  <input v-on:keyup.enter="searchArtist" v-model="term" type="text" aria-label="Search">
+               </div>
+            </div>
+            <div>
+               <p class="search-result">
+                  Search Result (Total {{shown.length}} Found.)
+               </p>
+            </div>
+            <div class="flex-grid">
+               <div v-for="(entry, index) in shown" class="flex-item">
+                  <div class='artist'>
+
+                     <div>
+                        <div class="card">
+                           <img class="card-img-top albumcover" v-bind:src="entry.artworkUrl100"
+                              v-bind:alt="entry.artistName">
+                           <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                                 <div v-if="entry.artistName">
+                                    <b>Artist Name: </b> {{entry.artistName}}
+                                 </div>
+                                 <div v-else>
+                                    <b>Artist Name: </b> No information provided
+                                 </div>
+                              </li>
+                              <li class="list-group-item">
+                                 <div v-if="entry.collectionName">
+                                    <b>Collection Name: </b> {{entry.collectionName}}
+                                 </div>
+                                 <div v-else>
+                                    <b>Collection Name: </b> No information provided
+                                 </div>
+                              </li>
+                              <li class="list-group-item">
+                                 <div v-if="entry.collectionPrice">
+                                    <b>Price: </b> {{entry.collectionPrice}}
+                                 </div>
+                                 <div v-else>
+                                    <b>Price: </b> 0
+                                 </div>
+                              </li>
+                              <li class="list-group-item">
+                                 <div v-if="entry.trackName">
+                                    <b>Song Name: </b> {{entry.trackName}}
+                                 </div>
+                                 <div v-else>
+                                    <b>Song Name: </b> No information provided
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
-   </div>
-   <script src="script.js"></script>
-   <div class="footer-spacing"></div>
-</body>
+      <script src="script.js"></script>
+      <div class="footer-spacing"></div>
+   </body>
+</main>
 <footer>
    <p class="footer-text">
       David Fan©

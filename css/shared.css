@@ -6,6 +6,11 @@
     position: absolute;
     transform: translateY(-600%);
     transition: transform 0.3s;
+    color: black;
+}
+
+b {
+    font-weight: bold;
 }
 
 .skip-to-content-link:focus {
@@ -19,6 +24,6 @@ footer {
     height: 30px;
 }
 
-.sr-only {
-    color: white;
+.nav-item {
+    color: black;
 }

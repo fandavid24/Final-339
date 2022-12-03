@@ -7,6 +7,10 @@
     column-gap: 5%;
 }
 
+.modal-title {
+    font-size: 150%;
+}
+
 .grid-container div {
     text-align: center;
     margin-bottom: 50px;
@@ -26,10 +30,12 @@
 
 .M-desc {
     display: inline;
+    font-size: 110%;
 }
 
 .TD-desc {
     display: none;
+    font-size: 110%;
 }
 
 .M-desc a {
